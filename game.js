@@ -33,9 +33,10 @@ function printHelp() {
   console.log("  Type 'h' for a list of valid commands\n");
 }
 
-function getWinner(move1, move2) {
-  // Your code here
-
+function getWinner(player, cpu) {
+  if (player === cpu) return 'tie';
+  if (VALID_MOVES[player].winsAgainst === cpu) return 'win';
+  return 'loss';
 }
 
 function getCPUMove() {
