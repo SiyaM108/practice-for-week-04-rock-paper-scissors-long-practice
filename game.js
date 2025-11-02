@@ -40,7 +40,9 @@ function getWinner(player, cpu) {
 }
 
 function getCPUMove() {
-  // Your code here
+  const keys = Object.keys(VALID_MOVES);
+  const randomIndex = Math.floor(Math.random() * keys.length);
+  return keys[randomIndex];
 }
 
 function processMove(cmd, cpu) {
